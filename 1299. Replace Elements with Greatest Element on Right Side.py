@@ -8,7 +8,7 @@ class Solution(object):
         """
         res = []
         rmax = -1
-        for i in range(len(arr) - 1, -1, -1):
+        for i in range(len(arr))[::-1]:
             res.insert(0, rmax)
             rmax = max(arr[i], rmax)
         return res
